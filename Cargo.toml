@@ -1,0 +1,9 @@
+[package]
+name = "fsi"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+inquire = "0.9.1"
+reqwest = { version = "0.12.25", features = ["blocking"] }
+terminal-spinners = "0.3.2"
