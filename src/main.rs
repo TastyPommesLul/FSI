@@ -5,6 +5,7 @@ use terminal_spinners::SpinnerBuilder;
 
 fn main() {
     let versions: Vec<&str> = vec![
+        "1.21.11",
         "1.21.10",
         "1.21.9",
         "1.21.8",
@@ -197,7 +198,7 @@ fn gen_windows(path: &String, allocated_gb: &String, file_name: &String) {
 
 fn handle_download(version: &str, file_path: &str) {
     let mut response = reqwest::blocking::get(
-        format!("https://meta.fabricmc.net/v2/versions/loader/{version}/0.18.1/1.1.0/server/jar")
+        format!("https://meta.fabricmc.net/v2/versions/loader/{version}/0.18.2/1.1.0/server/jar")
             .as_str()).unwrap();
     let mut file = match File::create(file_path) {
         Ok(file) => file,
